@@ -1,5 +1,30 @@
 # Helpful Linux Commands
 
+## Git Worktree (git worktree)
+
+Enables git branches as separate directories.
+
+```bash
+# Create directory for bare repo and branch directories
+mkdir -p repo_name
+cd repo_name
+# Clone bare repository, enabling worktree functionality
+git clone --bare <remote_url> .bare
+# Makes git commands work in this directory
+echo "gitdir: ./.bare" > .git
+# Add branch as directory
+git worktree add <branch_name>
+# Create new branch based on existing branch
+git worktree add -b <new_branch_name> <branch_dir_name> <existing_branch_name>
+
+# Do work
+
+# Remove worktree (can't delete local branch if being used as worktree)
+git worktree remove <worktree_dir_name>
+# Delete branch if needed
+git branch -D <branch _name>
+```
+
 ## Process Status (ps)
 
 ```bash
