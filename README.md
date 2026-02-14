@@ -53,6 +53,15 @@ ps auxf
 sudo socat TCP-LISTEN:66,fork,reuseaddr TCP:192.168.1.100:8080
 ```
 
+## Tape Archiver (tar)
+
+```bash
+# Decompress
+tar -xzf archive.tar.gz
+# Compress
+tar -czf archive.tar.gz /path/files
+```
+
 ### TODO List
 
 (because I keep forgetting what I should be adding to this doc...)
@@ -69,5 +78,4 @@ sudo socat TCP-LISTEN:66,fork,reuseaddr TCP:192.168.1.100:8080
 - ping (just because there's some cool hidden flags imo)
 - rclone or rsync ?
 - rg
-- tar (!!!!)
 - tmux (sessions...)
