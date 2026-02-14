@@ -1,5 +1,16 @@
 # Helpful Linux Commands
 
+## Git Filter Repo (git filter-repo)
+
+Rewrite git history across all commits.
+
+```bash
+git filter-repo --commit-callback '
+    if commit.author_name == b"old author name":
+        commit.author_name = b"new author name"
+        commit.author_email = b"new email"'
+```
+
 ## Git Worktree (git worktree)
 
 Enables git branches as separate directories.
