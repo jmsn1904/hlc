@@ -53,6 +53,12 @@ ps auxf
 sudo socat TCP-LISTEN:66,fork,reuseaddr TCP:192.168.1.100:8080
 ```
 
+## SSH Key Generate (ssh-keygen)
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
 ## Tape Archiver (tar)
 
 ```bash
